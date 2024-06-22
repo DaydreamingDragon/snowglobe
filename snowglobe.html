@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js."></script>
+    <div id="snowglobe">
+        <script>
+            // Select the globe
+            let globe = document.getElementbyId("snowglobe");
+            // Declare particles
+            let particles;
+            // Declare function for calculating gyro activity
+            function calculateAcceleration(event) {
+                const {x, y, z} = event.accelerationIncludingGravity;
+                const accelerationMagnitude = Math.sqrt(x * x + y * y + z * z);
+                return accelerationMagnitude;
+            }
+            
+            function shakeIt() {
+                particles.play;
+            }
+        </script>
+        <div id="particles">
+        </div>
+        <div id="ground">
+        </div>
+    </div>
+</html>
