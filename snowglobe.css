@@ -24,8 +24,8 @@ body {
     width: 85vmin;
     height: 85vmin;
 
-    /* temp background color */
-    background: #45b3e0;
+    /* Photo by Andreas Brücker on USplash */
+    background: url('/background.jpg') center/cover;
 
     /* make it round */
     border-radius: 100%;
@@ -46,5 +46,28 @@ body {
 #ground {
     height: 75%;
     width: 100%;
-    background: #bebebe;
+    background: #ECECEC;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+.shake {
+    animation: shake 1s;
 }
