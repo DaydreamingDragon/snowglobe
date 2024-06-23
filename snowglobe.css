@@ -23,9 +23,8 @@ body {
     /* set sizing */
     width: 85vmin;
     height: 85vmin;
-
-    /* Photo by Andreas Brücker on USplash */
-    background: #45b3e0;
+    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
     /* make it round */
     border-radius: 100%;
