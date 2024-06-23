@@ -8,15 +8,38 @@
             let globe = document.getElementbyId("snowglobe");
             // Declare particles
             let particles;
+            // Declare music
+            let music = document.getElementById('music')
             // Declare function for calculating gyro activity
             function calculateAcceleration(event) {
                 const {x, y, z} = event.accelerationIncludingGravity;
                 const accelerationMagnitude = Math.sqrt(x * x + y * y + z * z);
                 return accelerationMagnitude;
             }
-            
+            tsParticles.loadJSON('particles', 'particles.json')
+                .then(function () {
+                    // Select the particle container and pause the particles
+                    particles = tsParticles.domItem(0);
+                    particles.pause
+                    // Add globe event listener
+                    globe.addEventListener('click', () => {shakeIt()
+                    });
+                    // Add gyro event listener
+                    window.addEventListener("devicemotion", (event) => {
+                        // Calculate the magnitude
+                        const acceleration = claculateAcceleration(event);
+                        // Compare magnitude to threshold
+                        if (acceleration > 23) {
+                            shakeIt()
+                        }
+                    });
+                });
             function shakeIt() {
                 particles.play;
+                // Animation code
+                globe.classlist.add("shake")
+                setTimeout(() => {globe.classlist.remove("shake")}, 1100)
+                music.play
             }
         </script>
         <div id="particles">
