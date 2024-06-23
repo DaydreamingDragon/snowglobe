@@ -5,11 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Snowglobe</title>
-        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js."></script>
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
         <link rel="stylesheet" href="snowglobe.css">
     </head>
     <body>
         <div id="snowglobe">
+            <audio id="music" src="audio.mp3">
             <script>
                 // Select the globe
                 let globe = document.getElementById("snowglobe");
@@ -34,7 +35,7 @@
                         // Add gyro event listener
                         window.addEventListener("devicemotion", (event) => {
                             // Calculate the magnitude
-                            const acceleration = claculateAcceleration(event);
+                            const acceleration = calculateAcceleration(event);
                             // Compare magnitude to threshold
                             if (acceleration > 23) {
                                 shakeIt()
@@ -44,8 +45,8 @@
                 function shakeIt() {
                     particles.play;
                     // Animation code
-                    globe.classlist.add("shake")
-                    setTimeout(() => {globe.classlist.remove("shake")}, 1100)
+                    globe.classList.add("shake")
+                    setTimeout(() => {globe.classList.remove("shake")}, 1100)
                     music.play
                 }
             </script>
