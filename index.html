@@ -32,7 +32,9 @@
                         particles = tsParticles.domItem(0);
                         particles.pause
                         // Add globe event listener
-                        globe.addEventListener('click', () => {shakeIt()
+                        globe.addEventListener('click', () => {
+                            shakeIt()
+                            playMusic()
                         });
                         // Add gyro event listener
                         window.addEventListener("devicemotion", (event) => {
@@ -49,7 +51,9 @@
                     // Animation code
                     globe.classList.add("shake")
                     setTimeout(() => {globe.classList.remove("shake")}, 1100)
-                    music.play
+                }
+                function playMusic() {
+                    music.play;
                 }
             </script>
             <div id="particles">
