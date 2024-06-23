@@ -25,7 +25,7 @@ body {
     height: 85vmin;
 
     /* Photo by Andreas Brücker on USplash */
-    background-image: url('background.jpg') center/cover;
+    background: #45b3e0;
 
     /* make it round */
     border-radius: 100%;
@@ -46,7 +46,7 @@ body {
 #ground {
     height: 75%;
     width: 100%;
-    background: #ECECEC;
+    background: #bebebe;
 }
 
 @keyframes shake {
